@@ -1,12 +1,10 @@
 let camelCase = function(input) {
-  let devide = input.split(" ");
-  let newWord = [];
-  for (i = 0; i < devide.length; i++) {
-    let cap = devide[i];
-    let make = cap.charAt(0).toUpperCase() + cap.slice(1);
-    newWord.push(make);
+  let divide = input.split(" ");
+  for (i = 0; i < divide.length; i++) {
+    let capitalize = divide[i].charAt(0).toUpperCase() + divide[i].slice(1);
+    divide[i] = capitalize;
   }
-  let betterString = newWord.join("");
+  let betterString = divide.join("");
   return betterString.charAt(0).toLowerCase() + betterString.slice(1);
 };
 
