@@ -1,25 +1,18 @@
-// We will be given a number as our input data. This number is the highest value of our multiplication table.
-//  Our job is to generate a multiplication table for the values from 1 to the provided number.
-
 const multiplicationTable = function(maxValue) {
-  let iterationCounter = 1;
-  let ultimateArray = [];
-
-  for (x = 1; x <= maxValue; x++) {
-    let counter = 1;
-    ultimateArray.push(x);
+  let counter = 1;
+  for (y = 1; y <= maxValue; y++) {
+    let ultimateArray = [];
+    for (x = 1; x <= maxValue; x++) {
+      ultimateArray.push(x * counter);
+    }
+    console.log(ultimateArray.join(" "));
+    counter++;
   }
-  //   for (y = 1; y <= maxValue; y++) {
-  //     let index = y;
-  //     counter++;
-  //     console.log(index++);
-  //   }
-  return ultimateArray.join(" ");
 };
 
-console.log(multiplicationTable(1));
-// console.log(multiplicationTable(5));
-// console.log(multiplicationTable(10));
+multiplicationTable(1);
+multiplicationTable(5);
+multiplicationTable(10);
 
 // Output
 // 1
@@ -40,5 +33,3 @@ console.log(multiplicationTable(1));
 // 8 16 24 32 40 48 56 64 72 80
 // 9 18 27 36 45 54 63 72 81 90
 // 10 20 30 40 50 60 70 80 90 100
-// Create a function named multiplicationTable that receives a number maxValue as
-//  input and creates a square multiplication table where maxValue is the largest value in the table
