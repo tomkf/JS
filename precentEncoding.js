@@ -8,11 +8,12 @@ const urlEncode = function(text) {
   }
 };
 
-console.log(urlEncode("Lighthouse Labs"));
-console.log(urlEncode(" Lighthouse Labs "));
+console.log(urlEncode("URL Name"));
+console.log(urlEncode(" URL Name "));
 console.log(urlEncode("blue is greener than purple for sure"));
 
 // Expected Output
-// Lighthouse%20Labs
-// Lighthouse%20Labs
+// URL%20Name
+// URL%20Name
 // blue%20is%20greener%20than%20purple%20for%20sure
+
