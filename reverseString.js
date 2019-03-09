@@ -1,4 +1,6 @@
 //with reverse method
+//////////////////////
+
 
 function reverseMehthod(str) {
   let manipulateString = str.split("");
@@ -10,7 +12,12 @@ console.log(reverseMehthod("upsideDown"));
 //output
 // nwoDedispu
 
+
+
+
 //with for loop
+/////////////////
+
 
 function reverseString(string) {
   let manipulateString = string.split("");
@@ -32,7 +39,25 @@ console.log(reverseString("upsideDown"));
 
 
 
-//with a command line argument
+
+//with single command line output
+/////////////////////////////////////
+
+
+let CL = process.argv.slice(2);
+
+function reverseString(command) {
+  return command.reverse().join("");
+}
+
+console.log(reverseString(CL));
+
+
+
+
+
+//with multiple command line output
+///////////////////////////////////////
 
 
 let CL = process.argv.slice(2);
