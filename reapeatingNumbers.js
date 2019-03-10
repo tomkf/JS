@@ -13,14 +13,18 @@ let repeatNumbers = function(data) {
     for (let x = 0; x < repeatNumber; x++) {
       newSubArray.push(value);
     }
-    newarray.push(newSubArray);
+    newarray.push(newSubArray.join(""));
   }
-
   return newarray.join(" ");
 };
 
 console.log(repeatNumbers([[1, 10]]));
 console.log(repeatNumbers([[1, 2], [2, 3]]));
 console.log(repeatNumbers([[10, 4], [34, 6], [92, 2]]));
+
+// Output
+// 1111111111
+// 11, 222
+// 10101010, 343434343434, 9292
 
 
