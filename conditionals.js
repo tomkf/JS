@@ -1,7 +1,5 @@
-// For this kata, you'll be adding only the numbers in the array which match the given condition.
+// adds only the numbers in the array which match the given condition.
 
-// You'll be given an array of numbers and a condition, such as odd or even.
-// Given this condition, add up only the values which match that condition. If no values match the condition, return 0.
 
 let conditionalSum = function(values, condition) {
   conditionSum = 0;
