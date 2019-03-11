@@ -13,6 +13,32 @@
 let calculateChange = function(total, cash) {
   let money = cash - total;
   let CashTotal = money / 100;
+  let cashObj = {};
+  console.log(CashTotal);
+
+  let twenty = 20 % CashTotal;
+  console.log(twenty);
+  let ten = 10 % CashTotal;
+  let fiveDollar = 5 % CashTotal;
+  let twoDollar = 2 % CashTotal;
+  let oneDollar = 1 % CashTotal;
+  let quater = 0.25 % CashTotal;
+  let dime = 0.1 % CashTotal;
+  let nickle = 0.5 % CashTotal;
+
+  if (twenty >= 20) {
+    cashObj.twenty = 1;
+  } else if (ten >= 10) {
+    cashObj.ten = 1;
+  } else if (fiveDollar >= 5) {
+    cashObj.five = 1;
+  } else if (twoDollar >= 2) {
+    cashObj.two = 1;
+  } else if (oneDollar >= 1) {
+    cashObj.one = 1;
+  }
+
+  return cashObj;
 };
 
 console.log(calculateChange(1787, 2000));
