@@ -1,8 +1,14 @@
+//for information about square code visit: https://en.wikipedia.org/wiki/Four-square_cipher
+//once given string is arranged into "box" it will be encrypted from top down, left to right
+
+
+
+
 function convertToBox(str) {
   let wordToEncode = str.split(" ").join("");
-  let printInput = wordToEncode.split("").length; // 54
+  let printInput = wordToEncode.split("").length; // total number of chars.
 
-  let charactersForEachLine = Math.ceil(Math.sqrt(wordToEncode.length)); //8
+  let charactersForEachLine = Math.ceil(Math.sqrt(wordToEncode.length)); //squared number of chars.
 
   let encoded = [];
 
@@ -13,21 +19,28 @@ function convertToBox(str) {
   return encoded;
 }
 
+
 function convertToCode(str) {
   let box = convertToBox(str);
-  console.log(box);
 
-  let arr = [];
-  for (i = 0; i < box.length; i++) {
-    let counter = i;
-    let index = box[counter];
-    let letter = index.charAt(0);
+  let counter = 0;
+  let sentance = " ";
+  while (counter <= box.length) {
+    let word = " ";
 
-    arr.push(letter);
+    box.forEach(function(element) {
+      let letterDesired = element.charAt(counter);
+      word += letterDesired;
+    });
+
+    sentance += word += " ";
+    counter++;
   }
-  console.log(arr);
+  console.log(sentance);
 }
 
 convertToCode(
   "If man was meant to stay on the ground god would have given us roots"
 );
+
+//output:   Imtgdvs  fearwer  mayoogo  anouuio  ntnnlvt  wttddes  aohghn  sseoau
