@@ -1,10 +1,3 @@
-// look at last two digits
-// figure out number of 12s
-// find remainder 
-// number of 4's in remainder
-//  find day of month 
-// add month code
-
 const getDayOfTheWeek = (month, day, year) => {
  const daynames = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 //last two digits of year 
@@ -37,11 +30,6 @@ let sum = a + b + c + day + monthObj[month]
 
 let sum2 = sum % 7
 
-
-//any year divisible by 4 is a leap year 
-
-
-
 if (year > 1999) { 
     sum2 -= 1
 } else if( year > 1799 && year < 1900){
@@ -49,10 +37,6 @@ sum2 += 2
 } else if( year > 1699 && year < 1800){
     sum2 += 4
 }
-
-// if (year % 4 == 0 && (month == 1 || month ==2)){
-//     sum2 - 1
-// }
 
 
 return daynames[sum2]
@@ -99,13 +83,3 @@ console.log("end")
 }
 
  generateCalender()
-
-
-
-
-//["January", "Febuary", "March", "April", "May", "June", "July", "August", 'September', "October", "November", "December"];
-
-
-// let dayName = getDayOfTheWeek(months[i], dates[y], 2019)
-// let dayValue = Math.round(Math.abs((new Date(2019, months[i], dates[y]) - today) / oneDay));
-//   console.log(`${dayName} ${dayValue}`)
