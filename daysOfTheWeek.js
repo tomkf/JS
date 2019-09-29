@@ -46,7 +46,11 @@ const getDayOfTheWeek = (month, day, year) => {
   let sum = a + b + c + day + monthObj[month];
   let sum2 = sum % 7;
 
-  //any year divisible by 4 is a leap year
+  let leapCheck = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+
+  if (leapCheck && month < 3) {
+    sum2 -= 1;
+  }
 
   if (year > 1999) {
     sum2 -= 1;
